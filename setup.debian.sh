@@ -37,3 +37,6 @@ bogus-priv
 cache-size=1000
 resolv-file=/etc/resolv.dnsmasq" > /etc/dnsmasq.conf
 
+systemctl enable dnsmasq
+systemctl start dnsmasq
+systemctl restart NetworkManager
