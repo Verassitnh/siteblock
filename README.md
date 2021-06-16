@@ -1,6 +1,6 @@
 # siteblock
 
-To edit sites, edit `/etc/siteblock/blacklists` folder
+To edit sites, edit the `/etc/siteblock/blacklists` folder
 
 To install:
 ```sh
