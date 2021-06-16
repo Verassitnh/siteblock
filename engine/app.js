@@ -1,11 +1,12 @@
-const server = require("../server/server")
+const fs = require("fs")
+const path = require("path")
+let blocksites = ""
 
-//  Read all the files from the blocklist folder
+const files = fs.readdirSync(path.resolve(__dirname, "../blocklists"))
 
 
-// Check if they are in the hosts file
+for (let x in files) {
+ blocksites += fs.readFileSync(path.resolve(__dirname, "../blocklists/", files[x]), 'utf-8')
+}
 
-// If not add them
-
-// Start server
-server.start()
+fs.writeFileSync('/etc/hosts.blacklist', blocksites)
